@@ -1,0 +1,14 @@
+2010-03-07  Raymond Wan  <r.wan@aist.go.jp>
+
+  * parameters.c, input.c, plsa-defn.h :  Added the --debug option which
+      prints the values as they are read from the input file.
+  * README :  Corrected sample input file which was wrong.  Also corrected
+      some grammar mistakes.
+  * docs/manual.pdf :  Included a PDF file describing the code, as generated
+      by Doxygen.
+  * plsa :  Release of PLSA (baseline version) as version 1.0.1
+
+2009-10-21  Raymond Wan  <r.wan@aist.go.jp>
+
+  * plsa:  Release of PLSA (baseline version) as version 1.0
+
