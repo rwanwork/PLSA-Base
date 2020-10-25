@@ -13,15 +13,32 @@ In that paper, there are five systems.  This source code generates one of them: 
 
 
 
-Compiling
----------
+Requirements
+------------
+
+| Software        | Minimum version | Tested version | Required? | Web site                              |
+| --------------- | :-------------: | :------------: | :-------: | ------------------------------------- |
+| g++             | 4.3.2           | 10.2.0         | Yes       | http://gcc.gnu.org/                   |
+| CMake           | 3.2             | 3.16.3         | Yes       | http://www.cmake.org/                 |
+
 
 The PLSA software is written in C and has been compiled using the GNU gcc compiler v4.1.2 under Linux.  The system was tested on a 64-bit system, but does not make use of any features specific to 64-bit architectures.
 
-The PLSA system uses Autotools in order to create a Makefile which is configured to your system's settings.  This is done using the "configure" script.  Simply perform the following:
 
-    ./configure;make
+Compiling
+---------
 
+The PLSA-Base software is written in C and has been compiled using v4.3.2 of gcc. The system has been tested on both 32-bit and 64-bit systems, but it does not make use of any features from 64-bit architectures.
+
+CMake is used to compile the software and it is recommended that an "out-of-source" build is performed so as not to clutter the original source directories. We give some brief instructions below on how to do this:
+
+  1. You should have cloned this software from `GitHub`.  Within the main directory, create a directory called `build`.  Then enter it.  (Actually, build/ can be anywhere since it will be deleted later; this is just an example.)
+  2. Then run
+
+           cmake ..
+           
+  where ".." represents the location of the top-level `CMakeLists.txt`.
+  3. Type make to compile the C source code of PLSA-Base. If this succeeds, then the executable `plsa` will exist in your current directory.
 
 
 Running PLSA
@@ -248,7 +265,7 @@ Copyright and license
 ---------------------
 
     Probablistic latent semantic analysis (PLSA, baseline version)
-    Copyright (C) 2009-2010 by Raymond Wan
+    Copyright (C) 2009-2020 by Raymond Wan
 
 This software is distributed under the terms of the GNU General Public License (GPL, version 3 or later) -- see the file LICENSE for details.
 
