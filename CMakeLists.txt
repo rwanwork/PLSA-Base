@@ -26,9 +26,6 @@
 ##  Set the minimum required CMake version
 cmake_minimum_required (VERSION 3.5 FATAL_ERROR)
 
-##  Define the project
-project ("PLSA-Base" LANGUAGES C)
-
 
 ########################################
 ##  Define some variables
@@ -40,6 +37,9 @@ set (MY_C_FLAGS "-O3 -Wall -Wno-unused-result -Wno-unused-but-set-variable")
 
 set (TARGET_NAME_EXEC "plsa")
 set (CURR_PROJECT_NAME "PLSA-Base")
+
+##  Define the project
+project (${CURR_PROJECT_NAME} LANGUAGES C)
 
 
 ########################################
